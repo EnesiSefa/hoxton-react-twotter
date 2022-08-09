@@ -20,7 +20,7 @@ import { CgMoreO } from "react-icons/cg";
 import { FiMoreHorizontal, FiShare } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
 
-import "./App.css";
+import "../App.css";
 import { User, Users } from "../types/types";
 
 function SingleTweetPage() {

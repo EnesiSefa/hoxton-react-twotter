@@ -18,6 +18,7 @@ import { CgMoreO } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { Users } from "../types/types";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [users, setUsers] = useState<Users>([]);
@@ -34,7 +35,7 @@ export default function Header() {
         </div>
         <ul className="header-list">
           <li className="header-item">
-            <BiHomeCircle size={30} />
+            <Link to={"/home"}><BiHomeCircle size={30} /></Link>
           </li>
           <li className="header-item">
             <FaHashtag size={30} />

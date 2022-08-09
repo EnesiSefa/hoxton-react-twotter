@@ -10,6 +10,7 @@ import { FaRegComment, FaRetweet } from "react-icons/fa";
 import { FiMoreHorizontal, FiShare } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlinePermMedia } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { Users } from "../types/types";
 
 export default function Main() {
@@ -75,49 +76,52 @@ export default function Main() {
         <div>show 300 tweets</div>
         <ul className="posts-list">
           {users.map((user) => (
-            <li className="post-item">
-              <div className="profile-pic">
-                <img
-                  src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt=""
-                  height={20}
-                />
-              </div>
-              <div className="post-container">
-                <div className="post-info">
-                  <div className="post-info__names__and__more">
-                    <h3>{user.name}</h3>
-                    <span>{user.username}</span>
-                    <FiMoreHorizontal size={10} />
-                  </div>
-                  <p>{user.description}</p>
-                </div>
-                <div className="post-pic">
+            <Link to={"singletweetpage"}>
+              {" "}
+              <li className="post-item">
+                <div className="profile-pic">
                   <img
-                    src="https://media.istockphoto.com/photos/villefranche-on-sea-in-evening-picture-id1145618475?k=20&m=1145618475&s=612x612&w=0&h=_mC6OZt_eWENYUAZz3tLCBTU23uvx5beulDEZHFLsxI="
+                    src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     alt=""
-                    height={100}
+                    height={20}
                   />
                 </div>
-                <div className="post-interactions">
-                  <div>
-                    <FaRegComment />
-                    <span>23</span>
+                <div className="post-container">
+                  <div className="post-info">
+                    <div className="post-info__names__and__more">
+                      <h3>{user.name}</h3>
+                      <span>{user.username}</span>
+                      <FiMoreHorizontal size={10} />
+                    </div>
+                    <p>{user.description}</p>
                   </div>
-                  <div>
-                    <FaRetweet />
-                    <span>14</span>
+                  <div className="post-pic">
+                    <img
+                      src="https://media.istockphoto.com/photos/villefranche-on-sea-in-evening-picture-id1145618475?k=20&m=1145618475&s=612x612&w=0&h=_mC6OZt_eWENYUAZz3tLCBTU23uvx5beulDEZHFLsxI="
+                      alt=""
+                      height={100}
+                    />
                   </div>
-                  <div>
-                    <AiOutlineHeart />
-                    <span>34</span>
-                  </div>
-                  <div>
-                    <FiShare />
+                  <div className="post-interactions">
+                    <div>
+                      <FaRegComment />
+                      <span>23</span>
+                    </div>
+                    <div>
+                      <FaRetweet />
+                      <span>14</span>
+                    </div>
+                    <div>
+                      <AiOutlineHeart />
+                      <span>34</span>
+                    </div>
+                    <div>
+                      <FiShare />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

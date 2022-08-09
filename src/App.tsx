@@ -1,18 +1,40 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { BiEnvelope, BiHomeCircle, BiPoll } from "react-icons/bi";
+import {
+  FaBell,
+  FaHashtag,
+  FaRegComment,
+  FaRetweet,
+  FaTwitter,
+} from "react-icons/fa";
+import { BsCardList, BsEmojiSmile, BsStars } from "react-icons/bs";
+import { MdBookmarks, MdOutlinePermMedia } from "react-icons/md";
+import {
+  AiFillSchedule,
+  AiOutlineFileGif,
+  AiOutlineHeart,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { CgMoreO } from "react-icons/cg";
+import { FiMoreHorizontal, FiShare } from "react-icons/fi";
+import { GrLocation } from "react-icons/gr";
+import { User, Users } from "./types/types";
+import "./App.css";
 import Header from "./components/header";
-import ProfilePage from "./pages/ProfilePage";
+import Main from "./components/Main";
 import SingleTweetPage from "./pages/SingleTweetPage";
-import TweetsPage from "./pages/TweetsPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path={"/profilepage"} element={<ProfilePage />}></Route>
-        <Route path={"/singletweetpage"} element={<SingleTweetPage />}></Route>
-        <Route path={"/tweetspage"} element={<TweetsPage />}></Route>
+        <Route path="/home" element={<Main/>}/>
+        <Route path="/singletweetpage" element={<SingleTweetPage />} />
+        
       </Routes>
+      
     </div>
   );
 }
