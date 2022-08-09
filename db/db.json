@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "profilePic": "./assets/twitter.png",
+      "name": "Enesi",
+      "description":"this is a twitter pic",
+      "username": "Enesi24/7",
+      "postPic": "./assets/twitter.png"
+    }
+  ]
+}

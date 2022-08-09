@@ -1,90 +1,18 @@
-import { useState } from "react";
-
-import { BiEnvelope, BiHomeCircle } from "react-icons/bi";
-import { FaBell, FaHashtag, FaTwitter } from "react-icons/fa";
-import { BsCardList } from "react-icons/bs";
-import { MdBookmarks } from "react-icons/md";
-import { AiOutlineUser } from "react-icons/ai";
-import { CgMoreO } from "react-icons/cg";
-
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/header";
+import ProfilePage from "./pages/ProfilePage";
+import SingleTweetPage from "./pages/SingleTweetPage";
+import TweetsPage from "./pages/TweetsPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <div>
-          <FaTwitter />
-        </div>
-        <ul className="header-list"> 
-          <li className="header-item">
-            <BiHomeCircle />
-          </li>
-          <li className="header-item">
-            <FaHashtag />
-          </li>
-          <li className="header-item">
-            <FaBell />
-          </li>
-          <li className="header-item">
-            <BiEnvelope />
-          </li>
-          <li className="header-item">
-            <MdBookmarks />
-          </li>
-          <li className="header-item">
-            <BsCardList />
-          </li>
-          <li className="header-item">
-            <AiOutlineUser />
-          </li>
-          <li className="header-item">
-            <CgMoreO />
-          </li>
-          <li className="header-item">
-            <button>Tweet</button>
-          </li>
-        </ul>
-        <div></div>
-      </header>
-      <main className="main">
-        <div className="home">
-          <h1>Home</h1>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <form action="" className="form">
-            <input
-              type="text"
-              className="input"
-              placeholder="What's happening?"
-            />
-            <ul className="form-icons-list">
-              <li className="form-icon">media</li>
-              <li className="form-icon">Gif</li>
-              <li className="form-icon">Poll</li>
-              <li className="form-icon">Emoji</li>
-              <li className="form-icon">Schedule</li>
-              <li className="form-icon">Location</li>
-              <li className="form-icon">
-                <button>Tweet</button>
-              </li>
-            </ul>
-          </form>
-
-          <ul className="posts-list">
-            <li className="post-item">
-              <img src="" alt="" />
-              <div>
-                <h3></h3>
-                <span></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div className="R-menu">right-menu</div>
-      </main>
+      <Header />
+      <Routes>
+        <Route path={"/profilepage"} element={<ProfilePage />}></Route>
+        <Route path={"/singletweetpage"} element={<SingleTweetPage />}></Route>
+        <Route path={"/tweetspage"} element={<TweetsPage />}></Route>
+      </Routes>
     </div>
   );
 }

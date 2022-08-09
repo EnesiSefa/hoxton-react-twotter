@@ -23,7 +23,7 @@ import { GrLocation } from "react-icons/gr";
 import "./App.css";
 import { User, Users } from "../types/types";
 
-function SingleTweetPage() {
+function TweetsPage () {
   const [users, setUsers] = useState<Users>([]);
   useEffect(() => {
     fetch("http://localhost:4000/users")
@@ -186,4 +186,4 @@ function SingleTweetPage() {
   );
 }
 
-export default SingleTweetPage;
+export default TweetsPage;
