@@ -11,6 +11,8 @@
 .header {
   grid-area: header;
   background-color: aqua;
+  display: grid;
+  grid-gap: 20px;
 }
 
 .main {

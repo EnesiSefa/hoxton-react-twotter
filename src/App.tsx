@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { MdCode } from "react-icons/md";
+
 import { BiEnvelope, BiHomeCircle } from "react-icons/bi";
 import { FaBell, FaHashtag, FaTwitter } from "react-icons/fa";
 import { BsCardList } from "react-icons/bs";
+import { MdBookmarks } from "react-icons/md";
+import { AiOutlineUser } from "react-icons/ai";
+import { CgMoreO } from "react-icons/cg";
 
 import "./App.css";
 
@@ -13,7 +16,7 @@ function App() {
         <div>
           <FaTwitter />
         </div>
-        <ul className="header-list">
+        <ul className="header-list"> 
           <li className="header-item">
             <BiHomeCircle />
           </li>
@@ -26,12 +29,18 @@ function App() {
           <li className="header-item">
             <BiEnvelope />
           </li>
-          <li className="header-item"></li>
+          <li className="header-item">
+            <MdBookmarks />
+          </li>
           <li className="header-item">
             <BsCardList />
           </li>
-          <li className="header-item">Profile</li>
-          <li className="header-item">More</li>
+          <li className="header-item">
+            <AiOutlineUser />
+          </li>
+          <li className="header-item">
+            <CgMoreO />
+          </li>
           <li className="header-item">
             <button>Tweet</button>
           </li>
