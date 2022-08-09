@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdCode } from "react-icons/md";
 import { BiEnvelope, BiHomeCircle } from "react-icons/bi";
 import { FaBell, FaHashtag, FaTwitter } from "react-icons/fa";
-import { BsCardList } from "react-router-dom/bs";
+import { BsCardList } from "react-icons/bs";
 
 import "./App.css";
 
