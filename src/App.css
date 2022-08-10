@@ -7,7 +7,7 @@
     0.2fr 0.8fr;
   grid-gap: 20px;
 }
-
+/* header */
 .header {
   grid-area: header;
   background-color: aqua;
@@ -15,8 +15,17 @@
 }
 .header-item {
   list-style: none;
+  
+  
 }
-
+.header-profile-container {
+  display: grid;
+}
+.header-profile {
+  display: grid;
+  grid-auto-flow: column;
+}
+/* main */
 .main {
   grid-area: main;
   display: grid;
@@ -37,16 +46,17 @@
   display: grid;
   place-content: center;
   grid-gap: 20px;
-  
 }
+
+/* the form */
 .form-header {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
 }
 .form-container {
-display: grid;
-grid-auto-flow: column;
+  display: grid;
+  grid-auto-flow: column;
 }
 .form {
   display: grid;
@@ -68,6 +78,8 @@ grid-auto-flow: column;
   height: 50px;
   width: 300px;
 }
+
+/* tweets */
 .posts-list {
   display: grid;
 }
@@ -86,18 +98,74 @@ grid-auto-flow: column;
   grid-auto-flow: column;
   align-items: center;
 }
-.post-interactions{
+.post-interactions {
   display: grid;
   grid-auto-flow: column;
-  color: rgb(83 100 113)
-  
+  color: rgb(83 100 113);
 }
 
 .R-menu {
   grid-area: R-menu;
-  background-color: rgb(138, 177, 207)
+  background-color: rgb(138, 177, 207);
 }
 
-.form {
+/* Top Profile Page */
+
+.top-profile-page {
   display: grid;
+}
+.background-profile-pic {
+  background-color: aqua;
+}
+.profile-informations {
+  display: grid;
+}
+/* profile-pic and edit profile button */
+.profile-page-pic {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.following-followers {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+/* Profile page navigation tweets ,replies, media, likes */
+.profile-page-menu{
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+}
+
+/* Profile page Feed */
+
+.profile-page-feed{
+display: grid;
+}
+
+.profile-page-tweets{
+  display: grid;
+}
+.profile-page-tweet{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  
+}
+.tweet-right-side{
+  display: grid;
+  
+}
+.tweet-name-username-date{
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.profile-page-tweets__intercations{
+  display: grid;
+  grid-auto-flow: column;
 }

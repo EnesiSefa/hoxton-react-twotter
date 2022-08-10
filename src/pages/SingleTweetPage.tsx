@@ -32,53 +32,7 @@ function SingleTweetPage() {
     console.log(users);
   }, []);
   return (
-    <div className="App">
-      <header className="header">
-        <div className="logo">
-          <FaTwitter size={30} />
-        </div>
-        <ul className="header-list">
-          <li className="header-item">
-            <BiHomeCircle size={30} />
-          </li>
-          <li className="header-item">
-            <FaHashtag size={30} />
-          </li>
-          <li className="header-item">
-            <FaBell size={30} />
-          </li>
-          <li className="header-item">
-            <BiEnvelope size={30} />
-          </li>
-          <li className="header-item">
-            <MdBookmarks size={30} />
-          </li>
-          <li className="header-item">
-            <BsCardList size={30} />
-          </li>
-          <li className="header-item">
-            <AiOutlineUser size={30} />
-          </li>
-          <li className="header-item">
-            <CgMoreO size={30} />
-          </li>
-          <li className="header-item">
-            <button>Tweet</button>
-          </li>
-        </ul>
-        <ul>
-          {users.map((user) => (
-            <li className="header-item" key={user.id}>
-              <img src={user.profilePic} alt="" />
-              <h3>
-                <strong>{user.name}</strong>
-              </h3>
-              <h3>{user.username}</h3>
-              <FiMoreHorizontal size={10} />
-            </li>
-          ))}
-        </ul>
-      </header>
+   
       <main className="main">
         <div className="home">
           <div className="top-main-div">
@@ -182,7 +136,7 @@ function SingleTweetPage() {
 
         <div className="R-menu">right-menu</div>
       </main>
-    </div>
+    
   );
 }
 

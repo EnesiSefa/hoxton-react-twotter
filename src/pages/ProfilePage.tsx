@@ -8,7 +8,7 @@ import {
   FaRetweet,
   FaTwitter,
 } from "react-icons/fa";
-import { BsCardList, BsEmojiSmile, BsStars } from "react-icons/bs";
+import { BsCalendar, BsCardList, BsEmojiSmile, BsStars } from "react-icons/bs";
 import { MdBookmarks, MdOutlinePermMedia } from "react-icons/md";
 import {
   AiFillSchedule,
@@ -20,8 +20,8 @@ import { CgMoreO } from "react-icons/cg";
 import { FiMoreHorizontal, FiShare } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
 
-
 import { User, Users } from "../types/types";
+import { Link } from "react-router-dom";
 
 function ProfilePage() {
   const [users, setUsers] = useState<Users>([]);
@@ -32,132 +32,69 @@ function ProfilePage() {
     console.log(users);
   }, []);
   return (
-    <div className="App">
-      <header className="header">
-        <div className="logo">
-          <FaTwitter size={30} />
-        </div>
-        <ul className="header-list">
-          <li className="header-item">
-            <BiHomeCircle size={30} />
-          </li>
-          <li className="header-item">
-            <FaHashtag size={30} />
-          </li>
-          <li className="header-item">
-            <FaBell size={30} />
-          </li>
-          <li className="header-item">
-            <BiEnvelope size={30} />
-          </li>
-          <li className="header-item">
-            <MdBookmarks size={30} />
-          </li>
-          <li className="header-item">
-            <BsCardList size={30} />
-          </li>
-          <li className="header-item">
-            <AiOutlineUser size={30} />
-          </li>
-          <li className="header-item">
-            <CgMoreO size={30} />
-          </li>
-          <li className="header-item">
-            <button>Tweet</button>
-          </li>
-        </ul>
-        <ul>
-          {users.map((user) => (
-            <li className="header-item" key={user.id}>
-              <img src={user.profilePic} alt="" />
-              <h3>
-                <strong>{user.name}</strong>
-              </h3>
-              <h3>{user.username}</h3>
-              <FiMoreHorizontal size={10} />
-            </li>
-          ))}
-        </ul>
-      </header>
-      <main className="main">
-        <div className="home">
-          <div className="top-main-div">
-            <div className="form-header">
-              <h2>Home</h2>
-              <BsStars />
-            </div>
-            <div className="form-container">
+    <main className="main">
+      <div className="home">
+        <div className="top-profile-page">
+          <div className="background-profile-pic"></div>
+          <div className="profile-informations">
+            <div className="profile-page-pic">
               <img
                 src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt=""
-                height={20}
+                height={80}
               />
-              <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                }}
-                action=""
-                className="form"
-              >
-                <input
-                  type="text"
-                  className="input"
-                  placeholder="What's happening?"
-                />
-                <ul className="form-icons-list">
-                  <li className="form-icon">
-                    <MdOutlinePermMedia />
-                  </li>
-                  <li className="form-icon">
-                    <AiOutlineFileGif />
-                  </li>
-                  <li className="form-icon">
-                    <BiPoll />
-                  </li>
-                  <li className="form-icon">
-                    <BsEmojiSmile />
-                  </li>
-                  <li className="form-icon">
-                    <AiFillSchedule />
-                  </li>
-                  <li className="form-icon">
-                    <GrLocation />
-                  </li>
-                  <li className="form-icon">
-                    <button>Tweet</button>
-                  </li>
-                </ul>
-              </form>
+              <button className="edit-profile-button">Edit profile</button>
+            </div>
+            <div className="profile-name-username">
+              <h3>enesi</h3>
+              <p>enesiDev</p>
+            </div>
+            <div className="bio">
+              <h2>Hello World</h2>
+            </div>
+            <div className="joined">
+              <h3>
+                <BsCalendar /> Joined August 2009
+              </h3>
+            </div>
+            <div className="following-followers">
+              <div>
+                <h3>535</h3>
+                <span>following</span>
+              </div>
+              <div>
+                <h3>339.5K</h3>
+                <span>followers</span>
+              </div>
             </div>
           </div>
-          <div>show 300 tweets</div>
-          <ul className="posts-list">
+        </div>
+        <div className="profile-page-menu">
+          <h4>Tweets</h4>
+          <h4>Tweets{`&`}replies</h4>
+          <h4>Media</h4>
+          <h4>Likes</h4>
+        </div>
+        <div className="profile-page-feed">
+          <ul className="profile-page-tweets">
             {users.map((user) => (
-              <li className="post-item">
-                <div className="profile-pic">
+              <li className="profile-page-tweet">
+                <div className="tweet-left-side">
                   <img
                     src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     alt=""
                     height={20}
                   />
                 </div>
-                <div className="post-container">
-                  <div className="post-info">
-                    <div className="post-info__names__and__more">
-                      <h3>{user.name}</h3>
-                      <span>{user.username}</span>
-                      <FiMoreHorizontal size={10} />
-                    </div>
+                <div className="tweet-right-side">
+                  <div className="tweet-name-username-date">
+                    <h3>{user.name}</h3>
+                    <p>{user.username}</p>
+                  </div>
+                  <div>
                     <p>{user.description}</p>
                   </div>
-                  <div className="post-pic">
-                    <img
-                      src="https://media.istockphoto.com/photos/villefranche-on-sea-in-evening-picture-id1145618475?k=20&m=1145618475&s=612x612&w=0&h=_mC6OZt_eWENYUAZz3tLCBTU23uvx5beulDEZHFLsxI="
-                      alt=""
-                      height={100}
-                    />
-                  </div>
-                  <div className="post-interactions">
+                  <div className="profile-page-tweets__intercations">
                     <div>
                       <FaRegComment />
                       <span>23</span>
@@ -179,12 +116,11 @@ function ProfilePage() {
             ))}
           </ul>
         </div>
+      </div>
 
-        <div className="R-menu">right-menu</div>
-      </main>
-    </div>
+      <div className="R-menu">right-menu</div>
+    </main>
   );
 }
 
 export default ProfilePage;
-

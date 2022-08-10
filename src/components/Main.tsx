@@ -76,8 +76,7 @@ export default function Main() {
         <div>show 300 tweets</div>
         <ul className="posts-list">
           {users.map((user) => (
-            <Link to={"singletweetpage"}>
-              {" "}
+            <Link to={"/singletweetpage"}>
               <li className="post-item">
                 <div className="profile-pic">
                   <img
@@ -126,7 +125,11 @@ export default function Main() {
         </ul>
       </div>
 
-      <div className="R-menu">right-menu</div>
+      <div className="R-menu">
+        <div>
+          <input type="text" placeholder="Search  Twitter.." />
+        </div>
+      </div>
     </main>
   );
 }

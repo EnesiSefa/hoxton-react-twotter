@@ -24,17 +24,17 @@ import "./App.css";
 import Header from "./components/header";
 import Main from "./components/Main";
 import SingleTweetPage from "./pages/SingleTweetPage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/home" element={<Main/>}/>
+        <Route path="/home" element={<Main />} />
         <Route path="/singletweetpage" element={<SingleTweetPage />} />
-        
+        <Route path="/profilepage" element={<ProfilePage />} />
       </Routes>
-      
     </div>
   );
 }
