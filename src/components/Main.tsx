@@ -30,11 +30,14 @@ export default function Main() {
             <BsStars />
           </div>
           <div className="form-container">
-            <img
-              src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt=""
-              height={20}
-            />
+            <Link to={"/profilepage"}>
+              
+              <img
+                src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt=""
+                height={20}
+              />
+            </Link>
             <form
               onSubmit={(event) => {
                 event.preventDefault();
